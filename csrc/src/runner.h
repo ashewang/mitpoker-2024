@@ -213,7 +213,7 @@ void runBot(std::string& host, std::string& port, Args... args) {
   stream.connect(host, port);
   // set TCP_NODELAY on the stream
   boost::asio::ip::tcp::no_delay option(true);
-  stream.rdbuf()->set_option(option);
+  stream.socket().set_option(option);
   if (!stream) {
     fmt::print(FMT_STRING("Unable to connect to {}:{}"), host, port);
     return;
