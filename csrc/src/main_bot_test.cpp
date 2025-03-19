@@ -9,7 +9,7 @@ std::array<std::optional<int>, 2> NO_BIDS = {std::nullopt, std::nullopt};
 
 TEST(MainBotTest, TestPreflopState) {
   MainBot bot;
-  GameInfo game_info(0, 10.0, 1000);
+  GameInfo game_info(/*bankroll=*/0, /*game_clock=*/10.0, /*num_hands_in_match=*/1000);
 
   for (auto hand : std::vector<std::string>{"AcAd", "9s8s", "2c3c", "2d7c"}) {
     std::array<std::string, 2> hands = {hand, ""};

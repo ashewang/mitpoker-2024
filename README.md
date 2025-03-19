@@ -107,3 +107,8 @@ pre-commit install
 ### Arena Benchmarks
 
 Find our [benchmarks here](https://github.com/ruse-ai/mitpokerbots-2024/tree/gh-pages)
+
+```bash
+cd csrc
+sh build.sh 
+```
