@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <optional>
 #include <string_view>
-
+#include <string>
 namespace gtowizard {
 
 constexpr std::string_view kSuitChars = "cdhs";
@@ -22,7 +22,7 @@ constexpr hand_t NUM_HANDS_PREFLOP = 169;
 constexpr hand_t NUM_HANDS_POSTFLOP_2CARDS = 1326;
 constexpr hand_t NUM_HANDS_POSTFLOP_3CARDS = 22100;
 
-inline constexpr int STARTING_STACK = 400;
+inline constexpr int STARTING_STACK = 100;
 inline constexpr int BIG_BLIND = 2;
 inline constexpr int SMALL_BLIND = 1;
 inline constexpr int SB_POS = 0;

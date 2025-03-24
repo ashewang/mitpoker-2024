@@ -187,9 +187,9 @@ Action MainBot::solve_preflop_root_node(const GameInfo& game_info, const RoundSt
 
   if (!action_in_cache || !sb_legal_actions.has_value() || !sb_strategy.has_value()) {
     // Solve with a larger time limit (computed once)
-    float time_allowed = is_hero_node ? 100 : 15;
+    float time_allowed = is_hero_node ? 1000 : 150;
     fmt::print("is_hero={} - Solving root preflop node for {}ms \n", is_hero_node, time_allowed);
-    cfr_.solve(ranges_, state, player, time_allowed, sampled_action, 400);
+    cfr_.solve(ranges_, state, player, time_allowed, sampled_action, 1000);
     sb_strategy = cfr_.strategy();
     sb_legal_actions = cfr_.legal_actions();
   }
